@@ -11,6 +11,11 @@
     <img src="https://cdn.timesmedia.co.id/images/2020/06/12/UK-Petra-Surabaya.jpg" />
     <ion-card-header>
       <ion-card-subtitle>Profile</ion-card-subtitle>
+
+      <ion-card *ngIf="munculProfile == true" style="margin-left: 32%; border-radius: 80%; border: 2px; border-color: black; width: 100px; height: 100px;">
+        <img src="./assets/snoopy.jpg" />
+      </ion-card>
+
       <ion-card-title>Hello I'm Cynthia Wijaya</ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -31,4 +36,7 @@
       </ion-col>
     </ion-row>
   </ion-card>
+
+  <br/><br/>
+ 
 </ion-content>

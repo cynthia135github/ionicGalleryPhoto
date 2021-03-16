@@ -7,9 +7,31 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  myRandomNum : number;
+  txtAngka : number;
+  munculProfile = false;
+
+  constructor() {
+   
+  }
+
+  ngOnInit(){
+    this.generateRandom();
+    alert("hidden number: "+this.myRandomNum.toString());
+  }
+
+  generateRandom(){
+    this.myRandomNum = Math.floor(Math.random() * 10) + 1;
+  }
 
   tebakAngka(){
-    
+    if(this.myRandomNum == this.txtAngka){
+      alert('You Win');
+      this.munculProfile = true; 
+      this.txtAngka = 0;
+    }
+    else{
+      alert('Please Try Again');
+    }
   }
 }
